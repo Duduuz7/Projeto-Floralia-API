@@ -12,7 +12,6 @@ namespace Floralia_API.Interfaces
 
         public void Deletar(Guid id);
 
-        public void Atualizar(Guid idProduto, Produto produto);
-
+        public Produto Atualizar(Guid idProduto, Produto produto);
     }
 }

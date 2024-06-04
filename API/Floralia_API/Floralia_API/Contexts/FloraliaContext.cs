@@ -16,15 +16,15 @@ public partial class FloraliaContext : DbContext
     {
     }
 
-    public virtual DbSet<Carrinho> Carrinhos { get; set; }
+    public virtual DbSet<Carrinho> Carrinho { get; set; }
 
-    public virtual DbSet<Encomendum> Encomenda { get; set; }
+    public virtual DbSet<Encomenda> Encomenda { get; set; }
 
-    public virtual DbSet<Favorito> Favoritos { get; set; }
+    public virtual DbSet<Favorito> Favorito { get; set; }
 
-    public virtual DbSet<Produto> Produtos { get; set; }
+    public virtual DbSet<Produto> Produto { get; set; }
 
-    public virtual DbSet<Usuario> Usuarios { get; set; }
+    public virtual DbSet<Usuario> Usuario { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
@@ -42,7 +42,7 @@ public partial class FloraliaContext : DbContext
                 .HasDefaultValueSql("(newid())")
                 .HasColumnName("ID");
 
-            entity.HasOne(d => d.IdProdutoNavigation).WithMany(p => p.Carrinhos)
+            entity.HasOne(d => d.IdProdutoNavigation).WithMany(p => p.Carrinho)
                 .HasForeignKey(d => d.IdProduto)
                 .HasConstraintName("FK__Carrinho__IdProd__5535A963");
 
@@ -51,14 +51,14 @@ public partial class FloraliaContext : DbContext
                 .HasConstraintName("FK__Carrinho__IdUsua__5629CD9C");
         });
 
-        modelBuilder.Entity<Encomendum>(entity =>
+        modelBuilder.Entity<Encomenda>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Encomend__3214EC27E9F727D7");
 
             entity.Property(e => e.Id)
                 .HasDefaultValueSql("(newid())")
                 .HasColumnName("ID");
-            entity.Property(e => e.StatusEncomanda)
+            entity.Property(e => e.StatusEncomenda)
                 .HasMaxLength(60)
                 .IsUnicode(false);
 
@@ -81,7 +81,7 @@ public partial class FloraliaContext : DbContext
                 .HasDefaultValueSql("(newid())")
                 .HasColumnName("ID");
 
-            entity.HasOne(d => d.IdProdutoNavigation).WithMany(p => p.Favoritos)
+            entity.HasOne(d => d.IdProdutoNavigation).WithMany(p => p.Favorito)
                 .HasForeignKey(d => d.IdProduto)
                 .HasConstraintName("FK__Favorito__IdProd__59FA5E80");
 

@@ -4,8 +4,19 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <InvariantGlobalization>true</InvariantGlobalization>
+    <InvariantGlobalization>false</InvariantGlobalization>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Repositories\NovaPasta\**" />
+    <Compile Remove="ViewModels\NovaPasta\**" />
+    <Content Remove="Repositories\NovaPasta\**" />
+    <Content Remove="ViewModels\NovaPasta\**" />
+    <EmbeddedResource Remove="Repositories\NovaPasta\**" />
+    <EmbeddedResource Remove="ViewModels\NovaPasta\**" />
+    <None Remove="Repositories\NovaPasta\**" />
+    <None Remove="ViewModels\NovaPasta\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
@@ -28,7 +39,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
 
