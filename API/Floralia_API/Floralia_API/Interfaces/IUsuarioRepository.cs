@@ -6,7 +6,7 @@ namespace Floralia_API.Interfaces
     {
         void Cadastrar(Usuario usuario);
 
-        Usuario BuscarPorId(int id);
+        Usuario BuscarPorId(Guid id);
 
         Usuario BuscarPorEmailESenha(string email, string senha);
 

@@ -9,5 +9,8 @@ namespace Floralia_API.Interfaces
         public List<Favorito> ListarPorUsuario(Guid idUsuario);
 
         public void Deletar(Guid id);
+
+        public Favorito BuscarPorId(Guid idUsuario, Guid idProduto);
+        
     }
 }

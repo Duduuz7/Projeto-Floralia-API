@@ -11,7 +11,7 @@ public partial class Encomenda
 
     public Guid? IdUsuario { get; set; }
 
-    public string? StatusEncomenda { get; set; }
+    public string? StatusEncomanda { get; set; }
 
     public DateOnly? DataEncomenda { get; set; }
 
