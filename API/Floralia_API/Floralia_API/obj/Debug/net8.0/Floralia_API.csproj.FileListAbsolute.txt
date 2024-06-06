@@ -135,6 +135,7 @@ C:\Users\48114302801\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\
 C:\Users\48114302801\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\48114302801\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\48114302801\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+<<<<<<< HEAD
 C:\Users\53025781823\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\53025781823\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\bin\Debug\net8.0\appsettings.json
 C:\Users\53025781823\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\bin\Debug\net8.0\Floralia_API.exe
@@ -286,3 +287,15 @@ C:\Users\53025781823\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\
 C:\Users\53025781823\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\bin\Debug\net8.0\Azure.Storage.Common.dll
 C:\Users\53025781823\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\bin\Debug\net8.0\System.ClientModel.dll
 C:\Users\53025781823\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\bin\Debug\net8.0\System.IO.Hashing.dll
+=======
+C:\Users\48114302801\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\48114302801\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\48114302801\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\bin\Debug\net8.0\MailKit.dll
+C:\Users\48114302801\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\48114302801\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\48114302801\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\48114302801\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\48114302801\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\bin\Debug\net8.0\MimeKit.dll
+C:\Users\48114302801\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\48114302801\Desktop\Projeto-Floralia-API\API\Floralia_API\Floralia_API\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+>>>>>>> ec1d00b39f767c9e1b11738d95388c6f412f1765

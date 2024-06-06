@@ -58,7 +58,7 @@ public partial class FloraliaContext : DbContext
             entity.Property(e => e.Id)
                 .HasDefaultValueSql("(newid())")
                 .HasColumnName("ID");
-            entity.Property(e => e.StatusEncomanda)
+            entity.Property(e => e.StatusEncomenda)
                 .HasMaxLength(60)
                 .IsUnicode(false);
 

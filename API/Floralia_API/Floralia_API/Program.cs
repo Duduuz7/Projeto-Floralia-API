@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -5,8 +6,24 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using WebAPI.Utils.Mail;
+=======
+using Newtonsoft.Json;
+>>>>>>> ec1d00b39f767c9e1b11738d95388c6f412f1765
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+//adiciona as configurações do NewtonSoft para impedir erros de ciclo (cycle)
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(options =>
+    {
+        // Ignora os loopings nas consultas
+        options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+        // Ignora valores nulos ao fazer junções nas consultas
+        options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+    }
+);
+
 
 // Add services to the container.
 

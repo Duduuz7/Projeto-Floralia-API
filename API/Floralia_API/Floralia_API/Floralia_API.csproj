@@ -8,7 +8,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <PackageReference Include="Azure.Storage.Blobs" Version="12.20.0" />
+=======
+    <Compile Remove="Repositories\NovaPasta\**" />
+    <Compile Remove="ViewModels\NovaPasta\**" />
+    <Content Remove="Repositories\NovaPasta\**" />
+    <Content Remove="ViewModels\NovaPasta\**" />
+    <EmbeddedResource Remove="Repositories\NovaPasta\**" />
+    <EmbeddedResource Remove="ViewModels\NovaPasta\**" />
+    <None Remove="Repositories\NovaPasta\**" />
+    <None Remove="ViewModels\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+>>>>>>> ec1d00b39f767c9e1b11738d95388c6f412f1765
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <PackageReference Include="MailKit" Version="4.6.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.6" />
@@ -28,4 +42,11 @@
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.6.0" />
   </ItemGroup>
 
+<<<<<<< HEAD
+=======
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+>>>>>>> ec1d00b39f767c9e1b11738d95388c6f412f1765
 </Project>
