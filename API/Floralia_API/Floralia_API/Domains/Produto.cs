@@ -15,9 +15,9 @@ public partial class Produto
 
     public decimal? Preco { get; set; }
 
-    public virtual ICollection<Carrinho> Carrinhos { get; set; } = new List<Carrinho>();
+    public virtual ICollection<Carrinho> Carrinho { get; set; } = new List<Carrinho>();
 
-    public virtual ICollection<Encomendum> Encomenda { get; set; } = new List<Encomendum>();
+    public virtual ICollection<Encomenda> Encomenda { get; set; } = new List<Encomenda>();
 
-    public virtual ICollection<Favorito> Favoritos { get; set; } = new List<Favorito>();
+    public virtual ICollection<Favorito> Favorito { get; set; } = new List<Favorito>();
 }

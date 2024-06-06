@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace Floralia_API.Domains;
 
@@ -11,7 +12,7 @@ public partial class Carrinho
 
     public Guid? IdUsuario { get; set; }
 
-    public virtual Produto? IdProdutoNavigation { get; set; }
+    public virtual Produto? IdProdutoNavigation { get; set; } = null;
 
     public virtual Usuario? IdUsuarioNavigation { get; set; }
 }

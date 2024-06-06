@@ -15,9 +15,11 @@ public partial class Usuario
 
     public string? Foto { get; set; }
 
-    public virtual ICollection<Carrinho> Carrinhos { get; set; } = new List<Carrinho>();
+    public int? CodRecupSenha { get; set; }
+
+    public virtual ICollection<Carrinho> Carrinho { get; set; } = new List<Carrinho>();
 
     public virtual ICollection<Encomenda> Encomenda { get; set; } = new List<Encomenda>();
 
-    public virtual ICollection<Favorito> Favoritos { get; set; } = new List<Favorito>();
+    public virtual ICollection<Favorito> Favorito { get; set; } = new List<Favorito>();
 }
