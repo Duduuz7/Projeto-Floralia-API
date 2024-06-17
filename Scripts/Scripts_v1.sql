@@ -1,7 +1,7 @@
-CREATE DATABASE FloraliaBD;
+CREATE DATABASE Floralia_BD;
 GO
 
-USE FloraliaBD;
+USE Floralia_BD;
 GO
 
 -- Tabela Produto
@@ -20,29 +20,35 @@ CREATE TABLE Usuario (
     Nome VARCHAR(100) NULL,
     Email VARCHAR(100) NULL,
     Senha VARCHAR(100) NULL,
-    Foto VARCHAR(250) NULL --
+    Foto VARCHAR(250) NULL,
+	CodRecupSenha Int Null --
 );
 GO
 
--- Tabela Encomenda
-CREATE TABLE Encomenda (
+-- Tabela Pedido
+CREATE TABLE Pedido (
     ID uniqueidentifier PRIMARY KEY DEFAULT NEWID() NOT NULL,
-    IdProduto uniqueidentifier,
-    IdUsuario uniqueidentifier,
-    StatusEncomanda VARCHAR(60),
-    DataEncomenda DATE,
-    FOREIGN KEY (IdProduto) REFERENCES Produto(ID),
-    FOREIGN KEY (IdUsuario) REFERENCES Usuario(ID)
+    StatusPedido VARCHAR(60),
+    DataPedido DATE
 );
 GO
 
--- Tabela Carrinho
+---- Tabela Carrinho
+--CREATE TABLE Carrinho (
+--    ID uniqueidentifier PRIMARY KEY DEFAULT NEWID() NOT NULL,
+--    IdUsuario uniqueidentifier,
+--	StatusEncomenda VARCHAR(60),
+--    FOREIGN KEY (IdUsuario) REFERENCES Usuario(ID)
+--);
+--GO
+
+-- Tabela ProdutoPedido
 CREATE TABLE Carrinho (
     ID uniqueidentifier PRIMARY KEY DEFAULT NEWID() NOT NULL,
     IdProduto uniqueidentifier,
-    IdUsuario uniqueidentifier,
+    IdPedido uniqueidentifier,
     FOREIGN KEY (IdProduto) REFERENCES Produto(ID),
-    FOREIGN KEY (IdUsuario) REFERENCES Usuario(ID)
+    FOREIGN KEY (IdPedido) REFERENCES Pedido(ID)
 );
 GO
 

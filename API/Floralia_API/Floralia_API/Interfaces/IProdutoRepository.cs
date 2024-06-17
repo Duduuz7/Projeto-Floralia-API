@@ -10,6 +10,8 @@ namespace Floralia_API.Interfaces
 
         public Produto BuscarPorId(Guid id);
 
+        public List<Produto> BuscarPorNome(string nome);
+
         public void Deletar(Guid id);
 
         public Produto Atualizar(Guid idProduto, Produto produto);

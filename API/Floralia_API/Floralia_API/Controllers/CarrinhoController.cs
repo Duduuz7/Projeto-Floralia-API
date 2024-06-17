@@ -16,7 +16,7 @@ namespace Floralia_API.Controllers
             carrinhoRepository = new CarrinhoRepository();
         }
 
-        [HttpGet]
+        [HttpGet("BuscarPorUsuario")]
         public IActionResult GetByIdUsuario(Guid idUsuario)
         {
             try
@@ -29,7 +29,7 @@ namespace Floralia_API.Controllers
             }
         }
 
-        [HttpDelete]
+        [HttpDelete("Deletar")]
         public IActionResult Delete(Guid id) 
         {
             try
@@ -45,7 +45,7 @@ namespace Floralia_API.Controllers
             
         }
 
-        [HttpPost]
+        [HttpPost("Cadastrar")]
         public IActionResult Post(Carrinho carrinho)
         {
             try
@@ -59,6 +59,37 @@ namespace Floralia_API.Controllers
             }
         }
 
+        [HttpPut("AtualizarStatus")]
+
+        public IActionResult Put(Guid idUsuario, string status)
+        {
+            try
+            {
+                carrinhoRepository.AtualizarStatus(idUsuario, status);
+
+                return Ok();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        [HttpPatch("AtualizarStatusCarrinnho")]
+
+        public IActionResult Patch(Guid idCarrinho, string status)
+        {
+            try
+            {
+                carrinhoRepository.AtualizarStatusCarrinho(idCarrinho, status);
+
+                return Ok();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
     }
 }

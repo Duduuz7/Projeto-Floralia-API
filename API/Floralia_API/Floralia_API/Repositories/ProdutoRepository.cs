@@ -1,6 +1,7 @@
 ﻿using Floralia_API.Contexts;
 using Floralia_API.Domains;
 using Floralia_API.Interfaces;
+using System.Text;
 
 namespace Floralia_API.Repositories
 {
@@ -55,7 +56,33 @@ namespace Floralia_API.Repositories
             };
         }
 
-        public void Cadastrar(Produto produto)
+        public List<Produto> BuscarPorNome(string nome)
+        {
+            try
+            {
+                string termoPesquisaNormalizado = nome.Normalize(NormalizationForm.FormD)
+                                                           .ToLower()
+                                                           .Replace("\\p{M}", "");
+
+                var produtosNormalizados = ctx.Produto.ToList().Select(p => new Produto
+                {
+                    Id = p.Id,
+                    Nome = p.Nome.Normalize(NormalizationForm.FormD)
+                                 .ToLower()
+                                 .Replace("\\p{M}", ""),
+                    Foto = p.Foto,
+                    Preco = p.Preco
+                });
+
+                return produtosNormalizados.Where(p => p.Nome.Contains(termoPesquisaNormalizado)).ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void Cadastrar(Produto produto)  
         {
             try
             {

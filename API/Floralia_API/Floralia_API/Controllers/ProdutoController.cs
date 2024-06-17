@@ -88,5 +88,17 @@ namespace Floralia_API.Controllers
             }
         }
 
+        [HttpGet("BuscaPorNome")]
+        public IActionResult Get(string nome) 
+        {
+            try
+            {
+                return Ok(produtoRepository.BuscarPorNome(nome));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

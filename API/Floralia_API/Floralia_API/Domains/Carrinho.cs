@@ -12,6 +12,8 @@ public partial class Carrinho
 
     public Guid? IdUsuario { get; set; }
 
+    public string? Status { get; set; }
+
     public virtual Produto? IdProdutoNavigation { get; set; } = null;
 
     public virtual Usuario? IdUsuarioNavigation { get; set; }

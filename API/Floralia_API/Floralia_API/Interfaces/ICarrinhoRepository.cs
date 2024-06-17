@@ -9,5 +9,9 @@ namespace Floralia_API.Interfaces
         public List<Carrinho> ListarPorUsuario(Guid idUsuario);
 
         public void Deletar(Guid id);
+
+        public List<Carrinho> AtualizarStatus(Guid idUsuario, string status);
+
+        public Carrinho AtualizarStatusCarrinho(Guid idCarrinho, string status);
     }
 }
